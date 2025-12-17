@@ -1,0 +1,95 @@
+Product Requirements Document – Underground Coal Mine Explosion Prediction Tool
+
+1. Product overview
+The Underground Coal Mine Explosion Prediction Tool is a decision‑support system that helps safety engineers and control room operators anticipate explosion risk before critical thresholds are crossed. It combines historical and real‑time sensor data with machine learning models built in Python to estimate the likelihood of dangerous conditions and present clear, actionable warnings.
+
+The goal is not to replace human judgement, but to reduce missed early warnings and help engineers focus on the highest‑risk situations.
+
+ 2. Objectives & success metrics
+Primary objectives
+- Provide an early‑warning risk score for underground explosion risk in specific zones of a mine.
+- Summarise complex sensor and operational data into a simple, interpretable view.
+- Fit into existing control‑room workflows with minimal disruption.
+
+Success metrics
+
+- Reduction in number of high‑risk events (as defined by engineers) that occur with no prior warning from the tool.
+- Reduction in false‑positive alerts reported by engineers.
+- At least 80% of pilot users rate the interface as “clear” or “very clear” in usability feedback.
+
+3. Users & use cases
+Primary users
+- Safety engineers and ventilation officers in underground coal mines.
+- Control room operators monitoring real‑time sensor data.
+
+Secondary users
+- Mine managers and safety managers reviewing trends and reports.
+
+Core use cases
+1) Shift monitoring: Control room operator checks current risk level per zone at the start and during a shift.
+2) Early warning: System raises a clear alert when modelled explosion risk exceeds a threshold, before hard safety limits are reached.
+3) Investigation: Engineer drills into a zone to understand which factors (gas levels, ventilation, temperature, recent events) are driving the risk score.
+4) Reporting: Safety manager reviews historical risk scores and alerts over a time period to spot patterns or problem areas.
+
+4. Scope & features (v1)
+Inscope (v1)
+1) Data ingestion
+- Load historical and/or simulated underground mine data (gas concentration, airflow/ventilation readings, temperature, pressure, equipment status, basic events).
+- Pre‑process and clean data in Python (handling missing values, noise, and unit consistency).
+
+2) Machine learning risk model
+- Use Python and common ML libraries to train a classification or risk‑scoring model using historical data.
+- Model predicts explosion‑risk level for a given time window and mine zone (e.g. low / medium / high or 0–100 score).
+- Basic model evaluation: accuracy, precision/recall, confusion matrix, with a short explanation of trade‑offs.
+
+3) Risk dashboard (prototype)
+- Simple UI (e.g. web dashboard, notebook visualisation, or basic app) showing:
+  - Current risk level per zone
+  - Simple trend chart over time (e.g. last 24 hours)
+  - Colour or label to indicate low / medium / high risk.
+- Ability to click into a zone to see key contributing factors (e.g. rising gas levels + low airflow + recent equipment stoppage).
+
+4) Explainability
+- For each high‑risk prediction, show:
+  - The most important input signals (e.g. gas level trend, airflow drop, temperature spike).
+  - A short, human‑readable explanation like: “Rising methane levels + reduced airflow in Zone 3 over the last 40 minutes.”
+
+5) Alerts (basic)
+- System flags high‑risk zones in the UI.
+- Optional: log high‑risk events to a simple log/table for later review.
+
+Out of scope (v1)
+- Direct control or automation of mine equipment.
+- Full integration with existing SCADA/control systems.
+- Mobile apps or offline capability.
+
+5. Functional requirements
+1) The system must calculate a risk score for each zone at a regular interval (e.g. every 5–15 minutes) based on available data.
+2) The system must store historical risk scores and input data for later analysis.
+3) The model training process must be reproducible using Python scripts or notebooks (including data preprocessing steps).
+4) The UI or visualisation layer must clearly indicate zone name, current risk level, and last update time.
+5) Engineers must be able to see, for a given time and zone, which main variables contributed to the risk prediction.
+
+6. Non‑functional requirements
+- Performance: Risk scores should be computed fast enough for interactive use in a prototype (e.g. within seconds for a small dataset).
+- Reliability: The system should handle missing or noisy data gracefully (e.g. fallback values, warnings).
+- Usability: Safety engineers should be able to understand the interface with minimal explanation.
+- Explainability: Model outputs must be accompanied by human‑readable explanations, not just raw scores.
+
+7. Technical approach
+- Language: Python
+- Methods: Data analysis and machine learning for classification/risk scoring (e.g. tree‑based models or logistic regression, depending on data).
+- Data selection: Use scientific research and domain knowledge to choose the most relevant variables (e.g. gas types, ventilation readings, past incident data).
+- Visualisation: Simple charts/tables using Python libraries or a lightweight web framework.
+
+8. Risks & assumptions
+- Assumes access to sufficient historical or simulated data to train a useful model.
+- Assumes engineers will treat the tool as decision‑support, not absolute truth.
+- Assumes it is acceptable to start with a prototype that is not yet integrated into live mine systems.
+
+9. Future extensions (beyond v1)
+- Integrate with real‑time mine monitoring systems.
+- Add configurable alert thresholds per mine/zone.
+- Support multiple mines and site configurations.
+- Add exportable reports for regulators and management.
+
