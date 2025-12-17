@@ -1,0 +1,44 @@
+Implementation – Underground Coal Mine Explosion Prediction Tool
+
+Tech stack
+- Language: Python
+- Libraries: Pandas, NumPy, scikit-learn, Matplotlib/Seaborn
+- Data: real underground coal mine sensor datasets (Lin Hua Mine + Mendeley methane dataset)
+
+Model development process
+1) Data loading and cleaning
+- Load raw CSV files containing time‑stamped sensor readings from multiple devices.
+- Handle missing values, obvious errors, and inconsistent units.
+- Combine relevant columns into a single analysis dataset (e.g. methane concentration, airflow, temperature, pressure, equipment activity).
+
+2) Feature selection and engineering
+- Select variables that have a clear physical or empirical link to methane build‑up and explosion risk (e.g. gas content, wind speed, temperature, CO, sensor locations).
+- Use correlation analysis to see which features are most strongly related to methane concentration and explosion danger.
+- Drop clearly redundant or low‑value features so the model stays simple and explainable.
+
+3) Normalisation
+- Scale selected features to a common range (for example 0–1) so that variables with large numeric ranges do not dominate the model.
+- Save the scaler configuration so the same transformation can be applied to new data.
+
+4) Model training
+- Split the dataset into training and test sets.
+- Train a regression model (e.g. Linear Regression or a tree‑based model) to predict:
+  - methane concentration, or
+  - explosion danger degree
+  from the selected features.
+- Save the trained model for reuse inside the desktop application.
+
+5) Evaluation
+- Use Mean Squared Error (MSE) to measure the average difference between predicted and true values.
+- Use R² score to measure how much of the variation in the target variable is explained by the model.
+- Inspect residuals (errors) to see where the model performs poorly and in what conditions (e.g. certain zones or ranges) are hardest to predict.
+
+6) Integration with the desktop app
+- Wrap the trained model and preprocessing into functions that the desktop GUI can call after the user loads data.
+- Connect the GUI flow to the model pipeline:
+  - User imports data → data is cleaned and normalised
+  - User runs analysis → model generates predictions
+  - App displays risk scores and simple explanations based on model outputs.
+
+Summary
+The implementation combines real sensor data, a transparent regression‑based machine learning model, and a simple Python desktop interface. The goal is to give mine engineers a practical tool that predicts dangerous methane levels and explosion risk in time to support safer decisions, while keeping the pipeline reproducible and explainable.
