@@ -23,7 +23,7 @@ Key constraints
 
 Success metrics
 - Reduction in the number of high‑risk events that occur without prior warning.
-- Increase in actionable early warnings (alerts raised X hours/minutes before a dangerous state compared to the previous baseline.
+- Increase in actionable early warnings (alerts raised 1 hours before a dangerous state compared to the previous baseline.
 - Lower rate of false alarms reported by engineers and operators.
 - Positive qualitative feedback from safety engineers on clarity and usefulness of the predictions and interface.
 
