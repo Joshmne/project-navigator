@@ -1,0 +1,26 @@
+Learnings – Underground Coal Mine Explosion Prediction Tool
+
+What worked well
+- Real data, real problem: Using actual underground coal mine sensor data made the project feel like a real safety product, not a toy ML demo.
+- Clear problem framing: Starting from “predict dangerous methane levels and explosion risk” kept decisions focused on safety outcomes, not just model accuracy.
+- Explainable approach: Correlation + regression made it easier to show why risk is increasing, which is important for engineers to trust the tool.
+- Desktop workflow: Designing it as an installable desktop app that loads CSVs and outputs risk analysis fits how mining and safety teams already work.
+
+Challenges & limitations
+- Data generalisation: The datasets come from specific mines and time periods, so the model cannot be assumed to work for every mine without adaptation.
+Complex environment: Explosions depend on many interacting factors, and a simple model will always miss some rare or edge cases.
+- Thresholds are tricky: Setting what counts as “high risk” is a tradeoff between too many false alarms and missing real dangers.
+- Trust & validation: For a safety‑critical tool, real mine safety teams would need deeper validation and testing before relying on it.
+
+What I’d improve next
+- Work with mine safety engineers to refine features, thresholds, and what “high risk” means in practice.
+- Experiment with additional models (e.g. tree‑based or time‑series methods) but keep a strong focus on explainability.
+- Improve the desktop UI with clearer guidance, better summaries per zone, and simple export/reporting for managers.
+- Add stronger handling and warnings for missing sensors, bad data, or unusual conditions.
+
+How this project reflects my product approach
+- Start from a real, high‑stakes problem and user context, not from the algorithm.
+- Use data and research to choose an approach that is both user-centric and explainable.
+- Design the experience around how real engineers and operators will actually use the tool.
+- Be explicit about limitations and treat this as a prototype step toward a more robust safety decision‑support system.
+
