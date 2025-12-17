@@ -1,0 +1,30 @@
+Problem Definition – Underground Coal Mine Explosion Prediction
+
+Problem statement
+Underground coal mines are exposed to serious explosion risks due to gas build‑up, dust, ventilation failures, and equipment issues. Most monitoring systems generate raw sensor readings and alarms, but do not help engineers predict dangerous patterns early enough to act. This leads to late reactions, false alarms, and avoidable safety incidents.
+
+This project aims to define and prototype a decision‑support tool that uses historical and real‑time data to predict the likelihood of explosions in underground coal mines, and surface clear, actionable warnings for engineers and safety officers.
+
+Target users
+- Mine safety engineers and ventilation officers working in underground coal mines
+- Control room operators who monitor sensor data and alarms
+- Mine managers responsible for safety compliance and incident‑related decision‑making.
+
+Why this problem matters
+- Explosions in underground coal mines cause fatalities, injuries, and long‑term health issues.
+- Even with existing monitoring systems, engineers are often overloaded with raw data and alarms, making it hard to see early warning patterns.
+- A clearer, predictive decision‑support tool can reduce risk, support faster decisions, and improve compliance with safety standards.
+
+Key constraints
+- Data quality and availability: sensor coverage may be incomplete, noisy, or inconsistent across mines.
+- Real‑time requirements: predictions and alerts must be fast enough to be useful in active operations.
+- Environment constraints: underground networks may have limited connectivity and hardware.
+- Regulatory and safety standards: the tool must support, not replace, expert judgement and formal procedures.
+
+Success metrics
+- Reduction in the number of high‑risk events that occur without prior warning.
+- Increase in actionable early warnings (alerts raised X hours/minutes before a dangerous state compared to the previous baseline.
+- Lower rate of false alarms reported by engineers and operators.
+- Positive qualitative feedback from safety engineers on clarity and usefulness of the predictions and interface.
+
+
