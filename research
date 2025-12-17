@@ -1,0 +1,38 @@
+Research – Understanding Underground Coal Mine Explosion Risk
+
+Research approach
+For this case study, I combined:
+- Desk research on causes of underground coal mine explosions (gas, dust, ventilation, ignition sources)
+- Review of academic papers and industry reports on explosion prediction and monitoring systems
+- Informal conversations and assumptions based on how safety engineers typically work with sensor data and alarms
+
+The goal of this research is to understand how explosions happen, what data is available, and where current tools fail engineers.
+
+Key findings
+1) Data exists but is underused
+Most underground coal mines already collect data from gas sensors, ventilation flow meters, temperature and pressure sensors. In practice, this data is usually monitored through dashboards and alarm systems, but not analysed deeply over time to detect patterns that lead to dangerous states.
+
+2) Engineers are overloaded with raw alarms
+Safety engineers and control room operators often receive many alarms per shift. False positives and non‑critical alerts make it hard to spot the few signals that really matter. They rely on experience and intuition to interpret trends in gas levels, airflow, and equipment status.
+
+3) Existing tools focus on detection, not prediction 
+Most systems raise alarms when a threshold is crossed (e.g. gas concentration above a limit). There is limited support for predicting risk before thresholds are exceeded, for example when a combination of rising gas levels, poor ventilation, and recent equipment stoppages appears together.
+
+4) Information is fragmented across systems 
+Sensor readings, maintenance logs, ventilation plans, and incident reports are often stored in different tools or formats.
+This makes it difficult for engineers and managers to see the full picture quickly when making safety decisions.
+
+User insights (assumptions for this case study)
+Based on how similar safety‑critical environments work, we assume:
+- Engineers want fewer, more meaningful alerts, not more raw data
+- They need simple, visual trends (e.g. rising gas over time in a zone) rather than only current values
+- They value explainability– they need to understand why the system thinks the explosion risk is increasing
+- Any tool must fit into existing workflows in the control room, not replace every current system at once
+
+Research conclusions
+The opportunity is not just to collect more data, but to:
+- Combine existing data sources into a single, clearer view of explosion risk
+- Highlight early‑warning patterns before thresholds are crossed
+- Present predictions in a way that is easy to interpret and act on during a shift
+
+
