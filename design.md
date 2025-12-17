@@ -11,6 +11,7 @@ Key screens
 - Simple landing screen with:
   - Button: Create new analysis
   - List of previous analyses (file name, date run, mine/zone)
+<img width="557" height="363" alt="minset" src="https://github.com/user-attachments/assets/4ad9b1f4-25d8-4caa-9f4b-f517a411a407" />
 
 2) Data import screen
 Screenshot: `ui-data-import.png`
@@ -19,6 +20,7 @@ Screenshot: `ui-data-import.png`
   - See required columns/fields (e.g. timestamp, zone, gas readings, airflow, temperature)
 - Basic data preview table
 - Simple checks/warnings if key columns are missing
+<img width="557" height="274" alt="mineset2" src="https://github.com/user-attachments/assets/8591e3fc-3a61-49e2-9f5b-211d22fbb8dd" />
 
 3) Model configuration screen
 Screenshot: `ui-model-config.png`
@@ -26,6 +28,7 @@ Screenshot: `ui-model-config.png`
   - Choose which variables to include (e.g. gas type, temperature, CO, equipment parameters)
   - Set basic options (time window, zone filters)
 - Short text explaining what the model will do in plain language
+<img width="556" height="346" alt="data" src="https://github.com/user-attachments/assets/958e921f-f3a0-4c5b-9918-0306a5d2a2ce" />
 
 4) Results / Risk overview screen
 Screenshot: `ui-results-overview.png`
@@ -46,9 +49,3 @@ Visual style
 - High contrast with clear colour coding for risk levels
 - Text labels always shown with colours so it’s readable on basic monitors
 
-Files in this folder
-- `design.md` (this file)
-- `ui-data-import.png`
-- `ui-model-config.png`
-- `ui-results-overview.png`
-- `ui-analysis-detail.png`
